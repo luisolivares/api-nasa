@@ -20,7 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 public class NasaControllerTest implements Serializable {
 
-    private MockMvc mockMvc;
+    private final MockMvc mockMvc;
     private final ObjectMapper objectMapper;
     private final ApplicationConfiguration applicationConfiguration;
     private final ConfigProperties configProperties;
