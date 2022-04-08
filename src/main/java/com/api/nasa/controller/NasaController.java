@@ -17,12 +17,15 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RequestMapping(value = "/nasa")
 @RestController()
-@RequiredArgsConstructor
 public class NasaController {
 
-    @Autowired
     @Qualifier("apodService")
-    private ApodService apodService;
+    private final ApodService apodService;
+
+    @Autowired
+    public NasaController(ApodService apodService){
+        this.apodService = apodService;
+    }
 
     @GetMapping(value = "/apod", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<ApodResponse> getApod(
