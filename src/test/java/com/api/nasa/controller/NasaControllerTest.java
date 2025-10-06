@@ -35,7 +35,7 @@ public class NasaControllerTest implements Serializable {
 
     @Test
     public void getApod() throws Exception {
-        mockMvc.perform(get("/nasa/apod")
+        mockMvc.perform(get("/api/v1/nasa/apod")
                         .queryParam("api_key", configProperties.getApiKey())
                 )
                 .andExpect(status().isOk())
