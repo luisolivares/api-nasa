@@ -6,8 +6,8 @@ import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-@ConfigurationPropertiesScan("com.api.nasa.configuration")
 @SpringBootApplication
+@ConfigurationPropertiesScan("com.api.nasa.configuration")
 public class NasaApplication {
 
     public static void main(String[] args) {

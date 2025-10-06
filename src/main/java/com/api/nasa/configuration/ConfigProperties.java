@@ -6,8 +6,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.io.Serializable;
 
-@ConfigurationProperties(prefix = "nasa")
 @Data
+@ConfigurationProperties(prefix = "nasa")
 public class ConfigProperties implements Serializable {
 
     private String url;
